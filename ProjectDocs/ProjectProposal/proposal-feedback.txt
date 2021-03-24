@@ -1,0 +1,33 @@
+
+
+Evaluation and Feedback
+CMSI 401 project ~~ Fall 2020
+Adam Hirata, Raymond Law, Miliano Mikol, Jared Rebuyon
+Hausmate project
+=================================
+Presentation:
+   I don't see a copy of your presentation slides in your repo.  Please put
+   a copy in there.
+
+   from what I remember of your presentation, it was pretty well-organized,
+   and everyone knew which part they would describe, showing a good teamwork
+   focus from the start.  I look forward to seeing what you guys produce, and
+   I'm sure it will be most helpful, as you say, not only for room mates but
+   also for families and others who are in confined spaces for prolonged
+   periods of time, especially during the pandemic.  I wonder if there might
+   be a use case for the workplace as well?
+
+Proposal Document:
+   very good description of your project in the proposal document!  having
+   the breakdown of the intended application activities shows you have done
+   some good thinking about the goals of the project, and you have presented
+   good rationale for each of them.  the justification section is complete
+   and well-documented in its approach to all the courses, and your reasons
+   for challenges and the passion you all bring to the project are good to
+   hear!
+
+=============================================================================
+Great job on this presentation and proposal!
+
+your score:  5% out of 5% which is an A-plus [as long as I see a copy of your
+                                                presentation in your repo]

@@ -1,0 +1,65 @@
+
+
+Group 10: [4 souls] *
+   Adam Hirata, Ray Law, Miliano Mikol, Jared Rebuyon
+      synopsis:   hausmate ~ social mobile app for cohabitation communication
+========================================================================================
+The schedule is a good start, but you need to go longer than week 4 of the
+project.  I'm sure you can figure that out.  I realize that you don't know
+how long anything will take, but the scheduling exercise is to give you an
+initial experience of *trying* to estimate realistically how long something
+will take you as a group, based on the estimation of the individual parts.
+You can fix that in the next iteration which is in the SDP.
+
+The CSCI breakdown has too much information in it.  You only need to list
+the modules, not all the sub-parts.  I think that if you get to more than
+five "dot levels" that's too far.  Go for:
+
+5.2.1    Graphical User Interface [GUI] CSC
+5.2.1.1  Login screen CSU ~ [description]
+         Includes:   Haus Creation Module
+                     Haus Joining Module
+5.2.1.2  Main screen CSU ~ [description]
+         Includes:   Settings Menu Module
+                     Profile Menu Module
+                     Events Module
+                     Lists Module
+                     Announcements Module
+                     Chat Module
+                     Status Module
+                     Tools Module
+
+5.2.2    Database CSC
+5.2.2.1  Haus Entity CSU ~ [description]
+5.2.2.2  User Entity CSU ~ [description]
+5.2.2.3  List Entity CSU ~ [description]
+5.2.2.4  List Entry Entity CSU ~ [description]
+5.2.2.5  Users Table CSU ~ [description]
+5.2.2.6  Lists Table CSU ~ [description]
+
+5.2.3    Server CSC
+5.2.3.1  Authentication CSU ~ [description]
+5.2.3.2  Notification System CSU ~ [description]
+5.2.3.3  Database Server CSU ~ [description]
+5.2.3.4  Database System CSU ~ [description]
+5.2.3.5  Google Calendar API CSU ~ [description]
+
+Note that for section 5.2.2, I just used what you already have.  You may not
+need all of that, since it kind of looks like these are the tables in your
+database.  Unless you are going to have a unique code module to handle every
+table in your database, you don't need that level of detail.  You could put
+all of that under a "Database I/O CSU" heading and color it done.
+
+Section 5.2 looks GREAT!!  You guys nailed that one to the wall!
+
+The only other thing is to watch the word wrapping in the document.  When it
+wraps to a new line at the left margin, the doc gets kinda hard to read.  If
+you use a word processor that has "hanging indents" it makes life easier.
+
+GREAT WORK!!
+
+
+Evaluation score:
+
+    9.5% out of 10% for this deliverable:  A
+

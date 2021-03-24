@@ -1,0 +1,56 @@
+
+
+Group 10: [4 souls] *
+   Adam Hirata, Ray Law, Miliano Mikol, Jared Rebuyon
+      synopsis:   hausmate ~ social mobile app for cohabitation communication
+========================================================================================
+
+Architectural Design Section:
+-----------------------------
+Very nice job on this architectural level document!  The descriptions are
+clean and clear and the example screen views helo the reader understand what
+you are describing.  Very effective there!
+
+One thing to remember [which I'm not docking you for] is that in professional
+quality documentation you always spell out whatever you will be referring to
+with an acronym where it first occurs.  For example, under 6.2.1.2 you have:
+
+User-to-user interaction control is tantamount to the implementation of an
+SMS, which is based....
+
+...which technically should be:
+
+User-to-user interaction control is tantamount to the implementation of a
+Short Message Service (SMS), which is based....
+
+After it's defined this way, you can use "SMS" everywhere else and the reader
+will know exactly to what you are referring.  I'm not taking off points, you
+didn't know, but just be aware of this.
+
+The diagrams you've done are excellent as well!  Perfect detail to tell the
+implementation team what they should be building and how they should be
+building it!
+
+It looks like you have done enough work on this, actually, to count it as
+both the architectural and detailed designs, so you've earned credit for both
+of these assignments!
+
+Nice work!
+
+
+Evaluation score:
+
+    Arch:10% out of 10% for this deliverable:  A-plus
+
+
+------------------------
+Detailed Design Section:
+------------------------
+HA!  This one is easy to do ~ see above!
+
+Evaluation score:
+
+      15% out of 15% for this deliverable:   A-plus
+         Note that the "CDR presentation is folded into "ABCDR"
+            so the 15% reflects 10% for detail and 5% for CDR
+
