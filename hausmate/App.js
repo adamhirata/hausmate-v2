@@ -12,6 +12,7 @@ import JoinHausScreen from "./screens/JoinHausScreen";
 import LogoScreen from "./screens/LogoScreen";
 import LoadingScreen from "./screens/LoadingScreen";
 import ChatTool from "./screens/ChatTool";
+import TodoList from "./screens/TodoList";
 
 const changeScreen = (navigation) => {
   console.log("test");
@@ -30,6 +31,9 @@ const screens = {
   ChatTool: { screen: ChatTool },
   MainMenuScreen: {
     screen: MainMenuScreen,
+  },
+  TodoList: {
+    screen: TodoList,
   },
 };
 const Stack = createStackNavigator(screens);

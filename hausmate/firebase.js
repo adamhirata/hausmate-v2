@@ -19,10 +19,17 @@ class FirebaseSvc {
   }
 
   login = async (user, success_callback, failed_callback) => {
-    await firebase
+    firebase
       .auth()
       .signInWithEmailAndPassword(user.email, user.password)
+      .then((UserCredential) => {
+        let user = UserCredential.user;
+      })
       .then(success_callback, failed_callback);
+    // await firebase
+    //   .auth()
+    //   .signInWithEmailAndPassword(user.email, user.password)
+    //   .then(success_callback, failed_callback);
   };
 
   createAccount = async (user) => {

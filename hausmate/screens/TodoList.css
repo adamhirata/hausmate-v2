@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+    padding-left: 0px;
+    text-align: left;
+}
+
+.Buttons {
+    position: relative;
+    left: 350px;
+    bottom: 70px;
+}

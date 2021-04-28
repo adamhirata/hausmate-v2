@@ -1,13 +1,6 @@
 import { useRef, useState } from "react";
-// import firebase from "../firebase";
-// import "firebase/firestore";
-// import "firebase/auth";
-// import "firebase/analytics";
-// import { useCollectionData } from "react-firebase-hooks/firestore";
-// import "./ChatTool.css";
 import React from "react";
 import firebase from "firebase/app";
-import firebaseSvc from "../firebase";
 import "firebase/firestore";
 import "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -15,7 +8,6 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import "./ChatTool.css";
 
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
 const auth = firebase.auth();
 
 function ChatMessage(props) {
