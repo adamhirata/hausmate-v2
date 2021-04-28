@@ -141,10 +141,12 @@ body {
     color: white;
     background: #0b93f6;
     align-self: flex-end;
+    padding-left:20px;
   }
   .received p {
     background: #e5e5ea;
     color: black;
+    padding-left:20px; 
   }
   
   img {

@@ -13,6 +13,7 @@ import LogoScreen from "./screens/LogoScreen";
 import LoadingScreen from "./screens/LoadingScreen";
 import CalendarScreen from "./screens/CalendarScreen";
 import ChatTool from "./screens/ChatTool";
+import TodoList from "./screens/TodoList";
 
 const changeScreen = (navigation) => {
   console.log("test");
@@ -22,11 +23,11 @@ const changeScreen = (navigation) => {
 
 const screens = {
   //LoadingScreen: { screen: LoadingScreen, navigationOptions: { header: null } },
+  LogoScreen: { screen: LogoScreen, navigationOptions: { header: null } },
   CalendarScreen: {
     screen: CalendarScreen,
     navigationOptions: { headerStyle: { backgroundColor: "darkorange" } },
   },
-  LogoScreen: { screen: LogoScreen, navigationOptions: { header: null } },
   RegisterScreen: { screen: RegisterScreen },
   LoginScreen: { screen: LoginScreen },
   JoinHausScreen: { screen: JoinHausScreen },
@@ -36,6 +37,9 @@ const screens = {
   MainMenuScreen: {
     screen: MainMenuScreen,
     navigationOptions: { header: null },
+  },
+  TodoList: {
+    screen: TodoList,
   },
 };
 const Stack = createStackNavigator(screens);

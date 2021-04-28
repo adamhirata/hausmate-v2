@@ -13,6 +13,10 @@ export default function MainMenuScreen({ navigation }) {
   const onPressChat = async () => {
     navigation.navigate("ChatTool");
   };
+
+  const onPressTodo = async () => {
+    navigation.navigate("TodoList");
+  };
   return (
     <View style={styles.container}>
       <View style={[styles.header, styles.shadow, { color: "white" }]}>
@@ -30,12 +34,12 @@ export default function MainMenuScreen({ navigation }) {
           />
           Haus Chat
         </TouchableOpacity>
-        <TouchableOpacity onPress={onPressChat}>
+        <TouchableOpacity onPress={onPressTodo}>
           <Image
             style={styles.logo}
             source={require("../assets/createHaus.png")}
           />
-          Anonymous Chat
+          To-do Lists
         </TouchableOpacity>
 
         <StatusBar style="auto" />

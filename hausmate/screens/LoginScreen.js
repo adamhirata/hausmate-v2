@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, TextInput, Text, View, Button } from "react-native";
+import { InputLabel, FormControl, Input } from "@material-ui/core";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { NavigationActions } from "react-navigation";
 import firebaseSvc from "../firebase";
@@ -9,6 +10,7 @@ export default function LoginScreen({ navigation }) {
   const register = () => {
     navigation.navigate("RegisterScreen");
   };
+
   const onPressLogin = async () => {
     const user = {
       email: email,
@@ -34,21 +36,30 @@ export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Email:</Text>
-        <TextInput
-          style={styles.nameInput}
-          onChangeText={setEmail}
-          placeHolder={"Enter email"}
-        />
-        <Text style={styles.title}>Password:</Text>
-        <TextInput
-          style={styles.nameInput}
-          onChangeText={setPassword}
-          placeHolder={"Enter password"}
-        />
+        <FormControl>
+          <InputLabel>Email</InputLabel>
+          <Input type="text" value={email} onChange={handleEmail} />
+        </FormControl>
+        <FormControl>
+          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
+          <Input
+            id="filled-adornment-password"
+            type="password"
+            value={password}
+            onChange={handlePassword}
+          />
+        </FormControl>
       </View>
       <TouchableOpacity style={styles.button} onPress={onPressLogin}>
         <Button title="Login" color="darkorange" onPress={onPressLogin} />
