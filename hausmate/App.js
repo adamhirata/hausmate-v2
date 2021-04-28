@@ -11,6 +11,7 @@ import CreateHausScreen from "./screens/CreateHausScreen";
 import JoinHausScreen from "./screens/JoinHausScreen";
 import LogoScreen from "./screens/LogoScreen";
 import LoadingScreen from "./screens/LoadingScreen";
+import CalendarScreen from "./screens/CalendarScreen";
 import ChatTool from "./screens/ChatTool";
 
 const changeScreen = (navigation) => {
@@ -21,6 +22,10 @@ const changeScreen = (navigation) => {
 
 const screens = {
   //LoadingScreen: { screen: LoadingScreen, navigationOptions: { header: null } },
+  CalendarScreen: {
+    screen: CalendarScreen,
+    navigationOptions: { headerStyle: { backgroundColor: "darkorange" } },
+  },
   LogoScreen: { screen: LogoScreen, navigationOptions: { header: null } },
   RegisterScreen: { screen: RegisterScreen },
   LoginScreen: { screen: LoginScreen },
@@ -30,6 +35,7 @@ const screens = {
   ChatTool: { screen: ChatTool },
   MainMenuScreen: {
     screen: MainMenuScreen,
+    navigationOptions: { header: null },
   },
 };
 const Stack = createStackNavigator(screens);
