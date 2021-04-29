@@ -20,13 +20,15 @@ export default function MainMenuScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={[styles.header, styles.shadow, { color: "white" }]}>
-        Haus Code: OX145
+        Haus Code: OS125
       </View>
       <ScrollView
         style={{ alignSelf: "stretch" }}
         contentContainerStyle={{ alignItems: "center" }}
       >
-        <Text style={[styles.name, styles.shadow1]}>Welcome To CMSI402</Text>
+        <Text style={[styles.name, styles.shadow1]}>
+          Welcome To Finals Week
+        </Text>
         <TouchableOpacity onPress={onPressChat}>
           <Image
             style={styles.logo}
