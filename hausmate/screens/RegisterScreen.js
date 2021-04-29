@@ -1,11 +1,9 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, TextInput, Button, Text, Image, View } from "react-native";
+import { StyleSheet, Button, Text, View } from "react-native";
+import { InputLabel, FormControl, Input } from "@material-ui/core";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { NavigationActions } from "react-navigation";
 import firebaseSvc from "../firebase";
-
-//import PhoneInput from "../react-phone-number-input/input";
 
 export default function RegisterScreen({ navigation }) {
   const onPressCreate = async () => {
@@ -33,30 +31,38 @@ export default function RegisterScreen({ navigation }) {
   const [password, setPassword] = useState();
   const [name, setName] = useState();
 
-  // const onChangeTextEmail = (email) => useState({ email });
-  // const onChangeTextPassword = (password) => useState({ password });
-  // const onChangeTextName = (name) => setState({ name });
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleName = (event) => {
+    setName(event.target.value);
+  };
+
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Name:</Text>
-        <TextInput
-          style={styles.nameInput}
-          onChangeText={setName}
-          placeholder={"Enter name"}
-        />
-        <Text style={styles.title}>Email:</Text>
-        <TextInput
-          style={styles.nameInput}
-          onChangeText={setEmail}
-          placeholder={"Enter email"}
-        />
-        <Text style={styles.title}>Password:</Text>
-        <TextInput
-          style={styles.nameInput}
-          onChangeText={setPassword}
-          placeholder={"Enter password"}
-        />
+        <FormControl>
+          <InputLabel>Name</InputLabel>
+          <Input type="text" value={name} onChange={handleName} />
+        </FormControl>
+        <FormControl>
+          <InputLabel>Email</InputLabel>
+          <Input type="text" value={email} onChange={handleEmail} />
+        </FormControl>
+        <FormControl>
+          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
+          <Input
+            id="filled-adornment-password"
+            type="password"
+            value={password}
+            onChange={handlePassword}
+          />
+        </FormControl>
       </View>
       <TouchableOpacity style={styles.button} onPress={onPressCreate}>
         <Button

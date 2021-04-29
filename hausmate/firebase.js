@@ -65,9 +65,10 @@ class FirebaseSvc {
   };
 
   createHaus = async (user, hausName) => {
-    const collection = firebase.firestore().collection("hauses");
+    const hausCollection = firebase.firestore().collection("hauses");
+    const userCollection = firebase.firestore().collection("users");
 
-    const count = await collection.get().then((snap) => {
+    const count = await hausCollection.get().then((snap) => {
       return snap.size; // will return the collection size
     });
 
@@ -79,9 +80,13 @@ class FirebaseSvc {
 
     const hausIdentifier = identity.encode(count);
 
-    await collection.doc(hausIdentifier).set({
+    await hausCollection.doc(hausIdentifier).set({
       members: [user.uid],
       name: hausName,
+    });
+
+    await userCollection.doc(user.uid).update({
+      haus: hausIdentifier,
     });
 
     console.log("Haus created!");
@@ -102,9 +107,11 @@ class FirebaseSvc {
     haus
       .get()
       .then(async function (doc) {
-        if (doc.exists()) {
+        if (doc) {
           const currentMembers = doc.data().members;
+          console.log("current" + currentMembers);
           const updatedMembers = [...currentMembers, user.id];
+          console.log("updated" + updatedMembers);
           collection.doc(hausIdentifier).update({ members: updatedMembers });
         } else {
           console.log("No such document!");
@@ -113,7 +120,7 @@ class FirebaseSvc {
       .catch(function (error) {
         console.log("Error getting document:", error);
       });
-    if (!haus.exists()) {
+    if (!haus) {
       alert("No such document!");
     } else {
     }
