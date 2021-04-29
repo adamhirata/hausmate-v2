@@ -17,6 +17,11 @@ export default function MainMenuScreen({ navigation }) {
   const onPressTodo = async () => {
     navigation.navigate("TodoList");
   };
+
+  const onPressCalendar = async () => {
+    navigation.navigate("CalendarScreen");
+  };
+
   return (
     <View style={styles.container}>
       <View style={[styles.header, styles.shadow, { color: "white" }]}>
@@ -37,11 +42,15 @@ export default function MainMenuScreen({ navigation }) {
           Haus Chat
         </TouchableOpacity>
         <TouchableOpacity onPress={onPressTodo}>
+          <Image style={styles.logo} source={require("../assets/todo.png")} />
+          To-do Lists
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onPressCalendar}>
           <Image
             style={styles.logo}
-            source={require("../assets/createHaus.png")}
+            source={require("../assets/Calendar.png")}
           />
-          To-do Lists
+          Calendar
         </TouchableOpacity>
 
         <StatusBar style="auto" />
