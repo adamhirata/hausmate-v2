@@ -4,8 +4,6 @@ import firebaseSvc from "../firebase";
 import firebase from "firebase";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-//import PhoneInput from "../react-phone-number-input/input";
-
 export default function JoinHausScreen({ navigation }) {
   const onPressCreate = async () => {
     console.log("joining haus... hausID:" + hausID);

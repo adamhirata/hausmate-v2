@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, TextInput, Text, View, Button } from "react-native";
+import { StyleSheet, View, Button } from "react-native";
 import { InputLabel, FormControl, Input } from "@material-ui/core";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { NavigationActions } from "react-navigation";
@@ -16,8 +15,9 @@ export default function LoginScreen({ navigation }) {
       email: email,
       password: password,
     };
-    console.log(user);
-    //navigation.navigate({ routeName: "MainMenuScreen" });
+    navigation.reset([
+      NavigationActions.navigate({ routeName: "MainMenuScreen" }),
+    ]);
     firebaseSvc.login(user, loginSuccess, loginFailed);
   };
 
