@@ -16,10 +16,9 @@ export default function LoginScreen({ navigation }) {
       email: email,
       password: password,
     };
-    navigation.reset([
-      NavigationActions.navigate({ routeName: "MainMenuScreen" }),
-    ]);
-    //firebaseSvc.login(user, loginSuccess, loginFailed);
+    console.log(user);
+    //navigation.navigate({ routeName: "MainMenuScreen" });
+    firebaseSvc.login(user, loginSuccess, loginFailed);
   };
 
   const loginSuccess = () => {
